@@ -1,6 +1,6 @@
 package sn.edu.ucak.dar.entities;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -10,7 +10,11 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @Entity
+//@DiscriminatorValue("Formateur")
 public class Enseignant extends Personne {
+
+    @Column(nullable = false)
     private String matricule;
+
     private String matiere;
 }
